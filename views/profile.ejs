@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .container {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+        table {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <%- include('header') -%>
+    <div class="container">
+        <h1>Profile Information:</h1>
+        <table class="user-info" border="1">
+            <tr>
+                <th>id</th>
+                <th>username</th>
+                <th>email</th>
+                <th>role</th>
+            </tr>
+            <tr>
+                <td><%- user.id -%></td>
+                <td><%- user.username -%></td>
+                <td><%- user.email -%></td>
+                <td><%- user.role -%></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

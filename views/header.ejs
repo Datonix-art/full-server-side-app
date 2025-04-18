@@ -1,0 +1,48 @@
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <% if(!isLoggedIn) { %>
+                <li><a href="/auth/signup">Sign Up</a></li>
+                <li><a href="/auth/login">Log in</a></li>
+            <% } else { %>
+                <li><a href="/auth/logout">Log out</a></li>
+                <li><a href="/auth/profile">Profile</a></li>
+            <% } %>
+        </ul>
+    </nav>
+</header>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    header {
+        margin-bottom: 5rem;
+        margin-top: 2em;
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        margin-inline: auto;
+        max-width: 300px;
+    }
+    li {
+        cursor: pointer;
+    }
+    li:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+    a {
+        color: black;
+        font-size: 1.5rem;
+        text-decoration: none;
+        font-family: "Caveat", cursive;
+    }
+</style>
